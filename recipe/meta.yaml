@@ -1,5 +1,5 @@
 {% set name = "academic" %}
-{% set version = "0.2.8" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 174be3ec5d233c77be7e026052d739b2295ad1e15c07f49b817274c72a7e0050
+  sha256: def13a416f1d999b5ff16e3623b2bb249d9852f22f8f4405dd30d614355188bb
 
 build:
   noarch: python
