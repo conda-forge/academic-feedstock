@@ -1,5 +1,5 @@
 {% set name = "academic" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: faca6db3b692e53b25c588b1d6060f05b896790ebadb00dd0d0997e1aadbcf03
+  sha256: 242f2d89628769fcbd4d305f376dca5d3bf46221990dd8b75074e730ca375224
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - academic = academic.cli:main
 
@@ -25,6 +25,7 @@ requirements:
     - toml
     - requests
     - bibtexparser
+    - ruamel.yaml
 
 test:
   imports:
@@ -38,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'An admin tool for Academic'
+  summary: An admin tool for Academic
   description: |
     An admin tool for Academic.
 
