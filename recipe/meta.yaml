@@ -26,9 +26,6 @@ requirements:
     - ruamel.yaml ~=0.17
 
 test:
-  imports:
-    - academic
-    - academic.cli
   commands:
     - academic
 
