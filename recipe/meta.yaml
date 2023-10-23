@@ -18,14 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.11.5
     - pip
   run:
-    - python >=3.6
-    - toml
-    - requests
-    - bibtexparser
-    - ruamel.yaml
+    - python >=3.11.5
+    - bibtexparser ~=1.4
+    - ruamel.yaml ~=0.17
 
 test:
   imports:
@@ -35,18 +33,11 @@ test:
     - academic
 
 about:
-  home: https://github.com/sourcethemes/academic-admin
+  home: https://github.com/wowchemy/bibtex-to-markdown
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: An admin tool for Academic
-  description: |
-    An admin tool for Academic.
-
-    Features
-    - Import publications from BibTeX
-    - Import third-party assets to generate an entirely offline site
-  dev_url: https://github.com/sourcethemes/academic-admin
+  summary: Bibtex to Markdown Converter
 
 extra:
   recipe-maintainers:
