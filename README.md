@@ -3,20 +3,11 @@ About academic-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/academic-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/sourcethemes/academic-admin
+Home: https://github.com/wowchemy/bibtex-to-markdown
 
 Package license: MIT
 
-Summary: An admin tool for Academic
-
-Development: https://github.com/sourcethemes/academic-admin
-
-An admin tool for Academic.
-
-Features
-- Import publications from BibTeX
-- Import third-party assets to generate an entirely offline site
-
+Summary: Bibtex to Markdown Converter
 
 Current build status
 ====================
