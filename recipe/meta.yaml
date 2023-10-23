@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: rm poetry.lock && poetry install --only-root --no-interaction
   entry_points:
     - academic = academic.cli:main
 
 requirements:
   host:
     - python >=3.11.5
-    - pip
+    - poetry
   run:
     - python >=3.11.5
     - bibtexparser ~=1.4
