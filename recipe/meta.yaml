@@ -6,28 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 52a62f74ff67d31bf5a2879e7176d458ec5e0bed56c9626b67fa9c951729fe0a
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - academic = academic.cli:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - toml
     - requests
     - bibtexparser
     - ruamel.yaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - academic
     - academic.cli
